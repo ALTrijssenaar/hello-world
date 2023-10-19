@@ -89,7 +89,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           owner: ${{ steps.repo.outputs._0 }}
           repository: ${{ steps.repo.outputs._1 }}
-          milestone: ${{ needs.build.outputs.semVer }}
+          tagName: ${{ needs.build.outputs.semVer }}
 
       - name: Close release with GitReleaseManager
         uses: gittools/actions/gitreleasemanager/close@v0
